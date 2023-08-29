@@ -1,5 +1,5 @@
 <h1>Ecommerce</h1>
-Develeper ecommerce test for NTT DATA
+Develeper ecommerce test
 
 + Project created with Spring Boot as framework, 
 + Java 17, 
