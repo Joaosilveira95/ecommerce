@@ -4,7 +4,8 @@ Develeper ecommerce test for NTT DATA
 + Project created with Spring Boot as framework, 
 + Java 17, 
 + MySql Database.
-
+  
+<h1>DataBase</h1>
 You can access a database by changing the “application.properties” file with your credentials.
 For example:
 
@@ -18,6 +19,6 @@ For example:
 + spring.jpa.generate-ddl=true
 + spring.jpa.show-sql=true
 
-
+<h1>Swagger</h1>
 You can access swagger from this link
 http://localhost:8080/swagger-ui/index.html#/
