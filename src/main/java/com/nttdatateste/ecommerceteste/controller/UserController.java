@@ -69,6 +69,14 @@ public class UserController {
         return new ResponseEntity<>(UserDto.from(editedUser), HttpStatus.OK);
 
     }
+    
+    @Operation(summary = "Get User By Email", description = "Get Users By Email")
+    @GetMapping("/email/{email}")
+    public ResponseEntity<List<UserDto>> searchUsersByEmail(@PathVariable String email) {
+        List<User> users = (List<User>) userRepository.searchByEmailLike(email);
+        List<UserDto> userDtos = users.stream().map(UserDto::from).collect(Collectors.toList());
+        return new ResponseEntity<>(userDtos, HttpStatus.OK);
+    }
 
 
 

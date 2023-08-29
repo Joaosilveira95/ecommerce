@@ -16,5 +16,8 @@ public interface UserRepository extends CrudRepository<User, Long>, PagingAndSor
 	public Iterable<User> searchByNameLike(@Param("name") String name);
 
 	Optional<User> findByEmail(String email);
+	
+	@Query("SELECT p FROM User p WHERE p.email LIKE %:email%")
+	public Iterable<User> searchByEmailLike(@Param("email") String email);
 
 }
